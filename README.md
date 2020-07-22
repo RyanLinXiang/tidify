@@ -2,7 +2,7 @@
 
 ## Description
 
-“Tidify” is a fully equipped and nice-looking todo list with voice recognition. It has all the functionalities one would expect: create todo, mark/remark as done, delete, show archived todos. 
+"Tidify" is a fully equipped and clean-looking todo list with voice recognition. It has all the functionalities one would expect: create todo, mark/remark as done, delete, show archived todos and more. 
 
 ![Tidify overview](screenshots/overview.png)
 
@@ -15,12 +15,12 @@ To active voice control, click on the microphone symbol in the search field to a
 
 Current voice commands for the speech recognition:
 
-- "Create [your todo]"
-- "Delete item [the number shown in the list before each todo]"
-- "Check item [the number shown in the list before each todo]" (this marks a todo as checked and transfer it to the past list)
+- "Create *your todo*"
+- "Delete item *the number shown in the list before each todo*"
+- "Check item *the number shown in the list before each todo*" (this marks a todo as checked and transfer it to the past list)
 - "Show" (this shows the past todos list)
 - "Hide" (this hides the past todos list)
-- "Recover item [the number shown on the list before each todo done]" (this moves the todo from the past list back to the todo list
+- "Recover item *the number shown on the list before each todo done*" (this moves the todo from the past list back to the todo list)
 - "Delete all todos"
 - "Delete all past" (delete all past todos)
 - "Check all" (mark all active todos as done and move to the past list) 
@@ -39,7 +39,7 @@ let exe = function (transcript) {
     let todo = transcript.split("create")[1];
     if (todo)
         add_item(todo);  
-}; /* the function to be executed when your voice command is recognised */
+}; /* the function to be executed when your voice command is recognized */
 create_command(name, regex, exe);
 
 ```
