@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tidify - interactive Todo List with Speech Recognition</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Tidify
+          </h1>
+          <h2 class="subtitle">
+            w/o speech recognition (beta)
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <div class="columns is-marginless">
+      <div class="column is-11" id="main">
+        <div class="columns is-centered">
+          <div class="column is-narrow" id="outsidepanel_todos">
+            <div class="field has-addons">
+              <div class="control has-icons-left has-icons-right">
+                <input
+                  class="input is-primary is-medium"
+                  type="text"
+                  placeholder="next todo"
+                  id="newtodo"
+                />
+                <span class="icon is-left">
+                  <i class="far fa-check-circle" aria-hidden="true"></i>
+                </span>
+                <span class="icon is-right">
+                  <a href="javascript:void(0);" id="micro"
+                    ><i
+                      class="fas fa-microphone"
+                      aria-hidden="true"
+                      style="pointer-events: initial;"
+                    ></i
+                  ></a>
+                </span>
+              </div>
+              <div class="control">
+                <button class="button is-medium is-primary" id="addtodo">
+                  Add todo
+                </button>
+              </div>
+
+              <nav
+                class="navbar is-hidden-desktop"
+                role="navigation"
+                aria-label="main navigation"
+              >
+                <div class="navbar-brand">
+                  <a
+                    role="button"
+                    class="navbar-burger burger"
+                    aria-label="menu"
+                    aria-expanded="false"
+                    id="navbar"
+                  >
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                  </a>
+                </div>
+                <div
+                  class="navbar-menu"
+                  style="position: absolute;"
+                  id="navbar-menu"
+                >
+                  <div class="navbar-start">
+                    <a class="navbar-item" href="#todos_items">Active</a>
+                    <a class="navbar-item" href="#dones_items">Past</a>
+                  </div>
+                  <div class="navbar-end"></div>
+                </div>
+              </nav>
+            </div>
+
+            <article class="panel is-primary" id="todos_items">
+              <p class="panel-heading">
+                My current todos
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="column is-paddingless has-text-right is-hidden-mobile"
+        id="column_tab"
+      >
+        <div class="tag is-success is-light tab is-medium">
+          <span class="icon is-small">
+            <i class="far fa-clock has-text-grey-light" aria-hidden="true"></i
+          ></span>
+          <a href="javascript:void(0);" id="archivetab">Past</a>
+        </div>
+      </div>
+
+      <div class="column is-hidden-desktop" id="column_dones">
+        <div class="columns is-left">
+          <div class="column is-narrow is-full-desktop" id="outsidepanel_dones">
+            <article class="panel is-secondary" id="dones_items">
+              <p class="panel-heading">
+                My todos done
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="warning">
+        <div class="modal-background"></div>
+        <div class="modal-content"></div>
+        <button
+          class="modal-close is-large"
+          aria-label="close"
+          id="closewarning"
+        ></button>
+      </div>
+    </div>
+    <script src="basic.js"></script>
+    <script src="speech.js"></script>
+    <script src="speech_cmds.js"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+@charset "utf-8"
+@import "../../mybulma/sass/utilities/initial-variables.sass"
+$primary: $cyan
+$link: $cyan
+$secondary: $grey-lighter
+$secondary-invert: $white
+$infotag: $grey-lightest
+$infotag-invert: $grey-light
+$custom-colors: ("secondary": ($secondary, $secondary-invert), "infotag": ($infotag, $infotag-invert))
+@import "../../mybulma/bulma.sass"
+
+.tab
+    transform-origin: right bottom
+    transform: rotate(-90deg)
+
+
+.micro_active
+    animation: blinker 2s infinite
+    color: red
+
+
+@keyframes blinker 
+    50% 
+        opacity: 0 
+  
+.column
+      transition: all 1s
