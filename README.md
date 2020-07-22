@@ -9,18 +9,18 @@
 ![Tidify split screens](screenshots/split.png)
 
 ### Getting Started
-To run “Tidify”, just start `todolist.html`. In order to use voice recognition correctly, `todolist.html` needs to be run in a server environment (including localhost).
+To run "Tidify", just start `todolist.html`. In order to use voice recognition correctly, `todolist.html` needs to be run in a server environment (including localhost).
 
 To active voice control, click on the microphone symbol in the search field to activate/stop speech recognition.
 
 Current voice commands for the speech recognition:
 
 - "Create *your todo*"
-- "Delete item *the number shown in the list before each todo*"
-- "Check item *the number shown in the list before each todo*" (this marks a todo as checked and transfer it to the past list)
+- "Delete item x *(the number shown in the list before each todo)*"
+- "Check item x *(the number shown in the list before each todo)*" (this marks a todo as checked and transfer it to the past list)
 - "Show" (this shows the past todos list)
 - "Hide" (this hides the past todos list)
-- "Recover item *the number shown on the list before each todo done*" (this moves the todo from the past list back to the todo list)
+- "Recover item x *(the number shown on the list before each todo done)*" (this moves the todo from the past list back to the todo list)
 - "Delete all todos"
 - "Delete all past" (delete all past todos)
 - "Check all" (mark all active todos as done and move to the past list) 
@@ -41,10 +41,10 @@ let exe = function (transcript) {
         add_item(todo);  
 }; /* the function to be executed when your voice command is recognized */
 create_command(name, regex, exe);
-
 ```
 
 You can also adapt the voice recognition language by adapting the following line in the file `speech.js`:
+
 ```javascript
 // speech.js
 recognition.lang = 'en-US'; /* adapt to your language */
