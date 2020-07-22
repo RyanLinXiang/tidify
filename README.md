@@ -8,6 +8,10 @@
 
 ![Tidify split screens](screenshots/split.png)
 
+In the following you see voice control in action. A new item "Finish the project" is created, then marked as done. At the end, the "past" todos list is hidden.
+
+![Tidify animated](screenshots/overview-animated.gif)
+
 ### Getting Started
 To run "Tidify", just start `todolist.html`. In order to use voice recognition correctly, `todolist.html` needs to be run in a server environment (including localhost).
 
