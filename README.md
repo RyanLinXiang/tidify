@@ -47,6 +47,7 @@ You can also adapt the voice recognition language by adapting the following line
 
 ```javascript
 // speech.js
+
 recognition.lang = 'en-US'; /* adapt to your language */
 ```
 
